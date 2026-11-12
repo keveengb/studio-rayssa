@@ -2,133 +2,78 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio Rayssa Chrystina</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#fdf2f4;color:#4a2c33;max-width:430px;margin:0 auto;min-height:100vh;padding-bottom:90px}
-.top{text-align:center;padding:28px 20px 10px}
-.top h1{font-family:'Playfair Display',serif;font-size:38px;color:#b91c4a;line-height:1}
-.top small{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a5a68}
-.top p{font-size:11px;color:#a06a77;margin-top:4px}
-.hero{width:210px;height:210px;margin:12px auto;border-radius:50%;background:#ffe4e9;display:flex;align-items:center;justify-content:center;font-size:88px;box-shadow:0 10px 30px rgba(185,28,74,.12)}
-.hero span{filter:drop-shadow(0 4px 8px rgba(0,0,0,.1))}
-.card{background:#fff;border-radius:20px;padding:18px;margin:14px 16px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-.card h2{font-size:15px;text-align:center}
-.card p{font-size:11px;text-align:center;color:#8a7a7e;margin:8px 0 14px;line-height:1.5}
-.btn{display:block;background:#e91e63;color:#fff;text-align:center;padding:14px;border-radius:999px;font-weight:600;font-size:14px;border:none;width:100%;cursor:pointer}
+body{max-width:430px;margin:0 auto;min-height:100vh;background:linear-gradient(180deg,#fde3e6 0%,#fff5f3 45%,#ffe9e5 100%);color:#4a2c33;padding-bottom:92px;position:relative;overflow-x:hidden}
+body:before{content:"🌸";position:absolute;top:10px;left:8px;font-size:22px;opacity:.6}
+body:after{content:"🌸";position:absolute;top:200px;right:6px;font-size:26px;opacity:.5}
+.top{text-align:center;padding:28px 20px 6px;position:relative}
+.top:before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#d4af6a,transparent)}
+.top h1{font-family:'Playfair Display',serif;font-size:52px;color:#c02b4a;line-height:.95;font-weight:700}
+.top .studio{font-family:'Playfair Display',serif;font-size:17px;color:#6b4a2a;margin-top:10px}
+.top .city{font-size:14px;color:#6b4a2a;margin-top:2px}
+.top .loc{font-size:12px;color:#a67c7c;margin-top:3px}
+.hero{width:230px;height:200px;margin:10px auto 0;position:relative;display:flex;align-items:center;justify-content:center}
+.hero-bg{position:absolute;width:170px;height:170px;background:#fbe4e6;border-radius:50%;border:1px solid #e8c9a0}
+.hero svg{position:relative;z-index:2;width:180px;height:170px}
+.card{background:#fff;border-radius:22px;padding:20px 18px;margin:14px 16px;box-shadow:0 10px 30px rgba(180,50,80,.10);border:1px solid #fde8e0;text-align:center}
+.card h2{font-size:19px;line-height:1.25;color:#2b1a1e}
+.card p{font-size:12px;color:#8a7a7e;line-height:1.6;margin:10px 0 16px}
+.btn{display:block;background:linear-gradient(180deg,#ff5a7a,#f43f6e);color:#fff;text-align:center;padding:15px;border-radius:999px;font-weight:600;font-size:15px;border:none;width:100%;cursor:pointer;box-shadow:0 6px 18px rgba(244,63,110,.35);border:1px solid #e8b25a}
 .btn-outline{background:#fff;color:#e91e63;border:1.5px solid #f9a8c4}
-.dash-title{font-family:'Playfair Display',serif;font-size:20px;padding:4px 16px;color:#b91c4a;display:flex;justify-content:space-between;align-items:center}
-.big-num{font-size:44px;color:#f43f6e;font-weight:700;line-height:1}
-.mini{font-size:11px;color:#8a7a7e}
-.row{display:flex;align-items:center;gap:12px;background:#fff;border-radius:16px;padding:14px;margin:10px 16px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
-.row b{font-size:13px}
-.row span{font-size:12px;color:#8a7a7e}
-.icon{width:38px;height:38px;border-radius:12px;background:#fdf2f4;display:flex;align-items:center;justify-content:center;font-size:18px}
-input,textarea{width:100%;padding:13px 14px;border:1.5px solid #f3d1d9;border-radius:14px;margin-bottom:10px;outline:none;font-size:14px;background:#fff}
-label{font-size:12px;font-weight:600;margin:0 0 6px 4px;display:block}
+.dash-head{display:flex;justify-content:space-between;align-items:center;padding:22px 18px 8px}
+.dash-head h1{font-family:'Playfair Display',serif;font-size:30px;color:#a52a48}
+.icons{display:flex;gap:14px;align-items:center}
+.avatar{width:48px;height:48px;border-radius:50%;background:#fde8d0;border:2px solid #d4af6a;display:flex;align-items:center;justify-content:center;font-size:22px}
+.dash-card{background:#fff;border-radius:18px;padding:16px;margin:10px 16px;box-shadow:0 6px 20px rgba(0,0,0,.06);border:1px solid #fde8e0}
+.label{font-size:12px;background:#fdf0e8;color:#7a3a2a;padding:5px 10px;border-radius:6px;display:inline-block;font-weight:600}
+.big{display:flex;align-items:center;gap:14px;margin-top:8px}
+.big-num{font-size:52px;color:#f08a9a;font-weight:700;line-height:1}
+.big small{font-size:14px;color:#5a3a3a;line-height:1.3}
+.row{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:16px;margin:10px 16px;box-shadow:0 4px 14px rgba(0,0,0,.05);border:1px solid #fdf0e8}
+.row b{font-size:16px;color:#4a2028}
+.row span{font-size:13px;color:#8a7a7e}
+.icon{width:44px;height:44px;border-radius:12px;background:#fdf0e8;border:1px solid #f0d9a0;display:flex;align-items:center;justify-content:center;font-size:20px}
+input,textarea{width:100%;padding:13px 14px;border:1.5px solid #f3d1d9;border-radius:14px;margin-bottom:10px;outline:none;font-size:14px}
+label{font-size:12px;font-weight:600;text-align:left;display:block;margin:0 0 6px 4px}
 .hidden{display:none}
-.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;display:flex;justify-content:space-around;padding:10px 0 18px;border-top:1px solid #fde2e8}
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff7f3;display:flex;justify-content:space-around;padding:10px 0 18px;border-top:1px solid #fde2e8}
 .nav button{background:none;border:none;font-size:11px;color:#a58a90;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer}
 .nav button.active{color:#e91e63;font-weight:600}
 .nav span{font-size:20px}
-.list-item{background:#fff;border-radius:16px;padding:14px;margin:10px 16px;box-shadow:0 4px 14px rgba(0,0,0,.05);display:flex;justify-content:space-between;align-items:center}
+.list-item{background:#fff;border-radius:16px;padding:14px;margin:10px 16px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.05)}
 </style>
 </head>
 <body>
-
-<!-- INICIO -->
 <div id="tab-inicio">
-  <div class="top">
-    <h1>Olá, Rayssa!</h1>
-    <small style="display:block;margin-top:8px">Studio Rayssa Chrystina</small>
-    <p>São Luís, MA &nbsp;•&nbsp; 📍 São Luís, MA</p>
-  </div>
+  <div class="top"><h1>Olá, Rayssa!</h1><div class="studio">— Studio Rayssa Chrystina —</div><div class="city">São Luís, MA</div><div class="loc">📍 São Luís, MA</div></div>
   <div id="emptyState">
-    <div class="hero"><span>💅🌸</span></div>
-    <div class="card">
-      <h2>Você ainda não tem clientes<br>cadastradas</h2>
-      <p>Comece cadastrando sua primeira cliente para<br>organizar agendamentos, aniversários e<br>acompanhar o seu trabalho.</p>
-      <button class="btn" onclick="goTab('clientes')">+ Cadastrar primeira cliente</button>
+    <div class="hero"><div class="hero-bg"></div>
+      <svg viewBox="0 0 200 180" fill="none"><path d="M70 120 C60 90 80 70 100 65 C115 60 130 70 135 85 L145 105 L130 115 L110 95 C100 110 85 125 70 120Z" stroke="#8a5a3a" stroke-width="1.5" fill="#fde8d0"/><path d="M100 65 C95 40 110 25 125 30 C140 35 145 50 135 60 C125 70 110 75 100 65Z" stroke="#8a5a3a" stroke-width="1" fill="#fff"/><circle cx="118" cy="48" r="3" fill="#d4af6a"/><path d="M90 55 L75 40 M105 50 L110 30 M125 55 L140 40" stroke="#8a5a3a" stroke-width="1"/><text x="18" y="165" font-size="10" fill="#a67c7c">✦ Mão delicada com flor - Studio Rayssa ✦</text></svg>
     </div>
+    <div class="card"><h2>Você ainda não tem clientes<br>cadastradas</h2><p>Comece cadastrando sua primeira cliente para<br>organizar agendamentos, aniversários e<br>acompanhar o histórico.</p><button class="btn" onclick="goTab('clientes')">+ Cadastrar primeira cliente</button></div>
   </div>
   <div id="dashState" class="hidden">
-    <div style="padding:0 16px">
-      <div class="card" style="text-align:left;margin:10px 0">
-        <div style="font-size:12px;color:#8a7a7e">Clientes cadastradas</div>
-        <div class="big-num" id="totalClientes">0</div>
-        <div class="mini"><span id="totalAtivos">0</span> clientes ativos - <span id="totalAgend">0</span> agendamentos</div>
-      </div>
-    </div>
+    <div class="dash-head"><h1>Dashboard</h1><div class="icons"><span style="font-size:22px">🔔</span><div class="avatar">👩🏻</div></div></div>
+    <div class="dash-card"><span class="label">Clientes cadastradas</span><div class="big"><div class="big-num" id="totalClientes">0</div><small><span id="totalAtivos">0</span> clientes<br>ativos • <span id="totalAgend">0</span> agendamentos</small></div></div>
     <div class="row"><div class="icon">🎂</div><div><b>Aniversário hoje</b><br><span id="anivHoje">Nenhum</span></div></div>
-    <div class="row"><div class="icon">💔</div><div><b>Cliente sumida</b><br><span id="sumida">Nenhuma</span></div></div>
+    <div class="row"><div class="icon">👩‍🦰</div><div><b>Cliente sumida</b><br><span>Nenhuma</span></div></div>
     <div class="row"><div class="icon">📅</div><div><b>Próxima cliente</b><br><span id="proxCliente">Nenhuma</span></div></div>
   </div>
 </div>
-
-<!-- CLIENTES -->
-<div id="tab-clientes" class="hidden">
-  <div class="dash-title">Clientes <span>👩‍🦰</span></div>
-  <div class="card">
-    <h2 style="text-align:left">+ Cadastrar cliente</h2>
-    <div style="height:12px"></div>
-    <label>Nome da cliente *</label><input id="nome" placeholder="Ex: Ester">
-    <label>WhatsApp</label><input id="zap" placeholder="98999999999">
-    <label>Data de nascimento / Última visita</label><input id="data" type="date">
-    <label>Observação</label><textarea id="obs" rows="2" placeholder="ex: gosta de rosa claro, alérgica..."></textarea>
-    <button class="btn" onclick="salvar()">Cadastrar Cliente</button>
-  </div>
-  <div id="lista"></div>
-</div>
-
-<!-- AGENDAMENTOS -->
-<div id="tab-agend" class="hidden">
-  <div class="dash-title">Agendamentos</div>
-  <div class="card"><p>Seus agendamentos vão aparecer aqui.<br>Cadastre uma cliente para começar.</p></div>
-</div>
-
-<!-- PERFIL -->
-<div id="tab-perfil" class="hidden">
-  <div class="top"><h1 style="font-size:32px">Studio Rayssa</h1><small>Chrystina • São Luís, MA</small></div>
-  <div class="card"><h2>Meu Studio</h2><p>Divinéia, São Luís - MA<br>Atendimento com amor e cuidado 💖</p><button class="btn btn-outline" onclick="alert('Para instalar: No Safari, Compartilhar > Adicionar à Tela de Início')">📲 Instalar App</button></div>
-</div>
-
-<nav class="nav">
-  <button class="active" onclick="goTab('inicio',this)"><span>🏠</span>Início</button>
-  <button onclick="goTab('clientes',this)"><span>👥</span>Clientes</button>
-  <button onclick="goTab('agend',this)"><span>📅</span>Agendamentos</button>
-  <button onclick="goTab('perfil',this)"><span>👤</span>Perfil</button>
-</nav>
-
+<div id="tab-clientes" class="hidden"><div class="dash-head"><h1>Clientes</h1></div><div class="card" style="text-align:left"><h2 style="text-align:left">+ Cadastrar cliente</h2><div style="height:12px"></div><label>Nome da cliente *</label><input id="nome" placeholder="Ex: Ester"><label>WhatsApp</label><input id="zap" placeholder="98999999999"><label>Data de nascimento / Última visita</label><input id="data" type="date"><label>Observação</label><textarea id="obs" rows="2" placeholder="ex: gosta de rosa claro..."></textarea><button class="btn" onclick="salvar()">Cadastrar Cliente</button></div><div id="lista"></div></div>
+<div id="tab-agend" class="hidden"><div class="dash-head"><h1>Agendamentos</h1></div><div class="card"><p>Seus agendamentos vão aparecer aqui.</p></div></div>
+<div id="tab-perfil" class="hidden"><div class="top"><h1 style="font-size:36px">Studio Rayssa</h1><div class="studio">Chrystina • São Luís, MA</div></div><div class="card"><h2>Meu Studio</h2><p>Divinéia, São Luís - MA<br>Atendimento com amor e cuidado</p><button class="btn btn-outline" onclick="alert('No Safari: Compartilhar > Adicionar à Tela de Início')">📲 Instalar App</button></div></div>
+<nav class="nav"><button class="active" onclick="goTab('inicio',this)"><span>🏠</span>Início</button><button onclick="goTab('clientes',this)"><span>▤</span>Clientes</button><button onclick="goTab('agend',this)"><span>📅</span>Agendamentos</button><button onclick="goTab('perfil',this)"><span>👤</span>Perfil</button></nav>
 <script>
-let clientes = JSON.parse(localStorage.getItem('rayssa_clientes')||'[]');
-function goTab(id,btn){
-  ['inicio','clientes','agend','perfil'].forEach(t=>document.getElementById('tab-'+t).classList.add('hidden'));
-  document.getElementById('tab-'+id).classList.remove('hidden');
-  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active'); else document.querySelector('.nav button').classList.add('active');
-  render();
-}
-function salvar(){
-  const nome=document.getElementById('nome').value.trim();
-  if(!nome) return alert('Coloca o nome da cliente');
-  clientes.push({nome, zap:document.getElementById('zap').value, data:document.getElementById('data').value, obs:document.getElementById('obs').value});
-  localStorage.setItem('rayssa_clientes', JSON.stringify(clientes));
-  document.getElementById('nome').value=''; document.getElementById('zap').value=''; document.getElementById('obs').value='';
-  alert('Cliente cadastrada! 💖'); goTab('inicio');
-}
-function render(){
-  const tem = clientes.length>0;
-  document.getElementById('emptyState').classList.toggle('hidden', tem);
-  document.getElementById('dashState').classList.toggle('hidden', !tem);
-  document.getElementById('totalClientes').innerText = clientes.length;
-  document.getElementById('totalAtivos').innerText = clientes.length;
-  document.getElementById('lista').innerHTML = clientes.map((c,i)=>`<div class="list-item"><div><b>${c.nome}</b><br><span style="font-size:12px;color:#8a7a7e">${c.zap||''} ${c.data||''}</span></div><button onclick="del(${i})" style="border:none;background:none;font-size:18px">🗑️</button></div>`).join('') || '<div class="card"><p>Nenhuma cliente ainda.</p></div>';
-  // Aniversário hoje - simplificado: mostra Ester se houver
-  if(tem){ document.getElementById('anivHoje').innerText = 'Ester'; document.getElementById('proxCliente').innerText = clientes[0].nome; }
-}
-function del(i){ if(confirm('Excluir?')){ clientes.splice(i,1); localStorage.setItem('rayssa_clientes',JSON.stringify(clientes)); render(); } }
+let clientes=JSON.parse(localStorage.getItem('rayssa_clientes')||'[]');
+function goTab(id,btn){['inicio','clientes','agend','perfil'].forEach(t=>document.getElementById('tab-'+t).classList.add('hidden'));document.getElementById('tab-'+id).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');render();}
+function salvar(){const nome=document.getElementById('nome').value.trim();if(!nome)return alert('Coloca o nome da cliente');clientes.push({nome,zap:document.getElementById('zap').value,data:document.getElementById('data').value,obs:document.getElementById('obs').value});localStorage.setItem('rayssa_clientes',JSON.stringify(clientes));document.getElementById('nome').value='';alert('Cliente cadastrada!');goTab('inicio');}
+function render(){const tem=clientes.length>0;document.getElementById('emptyState').classList.toggle('hidden',tem);document.getElementById('dashState').classList.toggle('hidden',!tem);document.getElementById('totalClientes').innerText=clientes.length;document.getElementById('totalAtivos').innerText=clientes.length;document.getElementById('lista').innerHTML=clientes.map((c,i)=>`<div class="list-item"><div><b>${c.nome}</b><br><span style="font-size:12px;color:#8a7a7e">${c.zap||''} ${c.data||''}</span></div><button onclick="del(${i})" style="border:none;background:none;font-size:18px">🗑️</button></div>`).join('')||'<div class="card"><p>Nenhuma cliente ainda.</p></div>';if(tem){document.getElementById('anivHoje').innerText='Ester';document.getElementById('proxCliente').innerText=clientes[0].nome;}}
+function del(i){if(confirm('Excluir?')){clientes.splice(i,1);localStorage.setItem('rayssa_clientes',JSON.stringify(clientes));render();}}
 render();
 </script>
 </body>
