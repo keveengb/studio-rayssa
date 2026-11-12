@@ -2,94 +2,44 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Studio Rayssa Chrystina</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{max-width:430px;margin:0 auto;min-height:100vh;background:#ffe9e5}
-.tela{position:relative;width:100%;max-width:430px;min-height:100vh;overflow:hidden;background:#fff}
-.tela img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.area-btn{position:absolute;left:12%;right:12%;bottom:8.5%;height:56px;background:transparent;border:none;cursor:pointer;border-radius:999px;z-index:5}
-.num{position:absolute;left:15%;top:22.5%;font-size:64px;font-weight:600;color:#f08a9a;z-index:5}
-.num2{position:absolute;left:38%;top:25%;font-size:18px;line-height:1.2;color:#7a3a3a;z-index:5}
-.card{background:#fff;border-radius:20px;padding:18px;margin:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
-.btn{display:block;background:#f43f6e;color:#fff;text-align:center;padding:14px;border-radius:999px;font-weight:600;border:none;width:100%;cursor:pointer}
-input,textarea{width:100%;padding:13px;border:1.5px solid #f3d1d9;border-radius:14px;margin-bottom:10px;outline:none}
-.hidden{display:none}
-.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(255,255,255,.98);display:flex;justify-content:space-around;padding:10px 0 18px;z-index:10;border-top:1px solid #fde2e8}
-.nav button{background:none;border:none;font-size:11px;color:#a58a90;display:flex;flex-direction:column;align-items:center;gap:2px}
-.nav button.active{color:#e91e63;font-weight:600}
-.conteudo{position:relative;z-index:2;background:#fff5f3;min-height:100vh;padding:20px 0 100px}
-</style>
-</head>
-<body>
+*{margin:0;padding:0;box-sizing:border-box}
+body{max-width:430px;margin:0 auto;background:#fde8e6;min-height:100vh;padding-bottom:82px;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased}
+.hidden{display:none!important}
 
-<!-- INICIO -->
-<div id="tab-inicio">
-  <!-- SEM CLIENTE = TUA FOTO 1 -->
-  <div id="tela-vazia" class="tela">
-    <img src="fundo.png" class="bg">
-    <button class="area-btn" onclick="goTab('clientes')"></button>
-  </div>
-  <!-- COM CLIENTE = TUA FOTO 2 -->
-  <div id="tela-cheia" class="tela hidden">
-    <img src="dashboard.png" class="bg">
-    <div class="num" id="nClientes">0</div>
-    <div class="num2"><span id="nAtivos">0</span> clientes<br>ativos • <span id="nAgend">0</span> agendamentos</div>
-  </div>
-</div>
+/* ===== TELA 1 - EXATA DA FOTO ===== */
+.tela1{background:linear-gradient(180deg,#f9aab9 0%,#fbc6cd 18%,#fde8e6 42%);padding:0 0 8px;position:relative;overflow:hidden}
+.topo{position:relative;text-align:center;padding:24px 16px 0}
+.topo::before{content:"";position:absolute;top:16px;left:10px;right:10px;height:1px;background:#c9a24a;transform:rotate(-3deg)}
+.topo::after{content:"";position:absolute;top:22px;left:10px;right:10px;height:1px;background:#c9a24a;transform:rotate(2.8deg)}
+.topo h1{font-family:'Playfair Display',serif;font-size:48px;line-height:1;color:#b82e4a;font-weight:700;letter-spacing:-.5px}
+.topo .studio{font-family:'Playfair Display',serif;font-size:15.5px;color:#6b4a2a;font-weight:600;margin-top:11px}
+.topo .cidade{font-size:15px;color:#6b4a2a;font-weight:400;line-height:1.4}
+.topo .loc{font-size:12.5px;color:#d67a8c;margin-top:2px}
+.hero{width:230px;height:198px;margin:2px auto 0;position:relative}
+.circ{width:168px;height:168px;background:#fcdbe1;border-radius:50%;border:1px solid #eacaa5;position:absolute;left:50%;top:8px;transform:translateX(-50%)}
+.card{background:#fff;border-radius:22px;padding:20px 18px 20px;margin:8px 16px;box-shadow:0 10px 30px rgba(180,50,80,.10);border:1px solid #fde8e0;text-align:center}
+.card h2{font-size:19px;line-height:1.35;color:#24181c;font-weight:600}
+.card p{font-size:12.2px;color:#8a7a7e;line-height:1.65;margin:10px 0 16px;font-weight:300}
+.btn{width:100%;background:linear-gradient(180deg,#ff5a7a,#f43f6e);color:#fff;border:none;padding:15px;border-radius:999px;font-weight:600;font-size:15px;cursor:pointer;box-shadow:0 6px 18px rgba(244,63,110,.35);font-family:'Poppins',sans-serif}
 
-<!-- CLIENTES -->
-<div id="tab-clientes" class="hidden"><div class="conteudo">
-  <div class="card" style="text-align:left"><h2>+ Cadastrar cliente</h2><div style="height:12px"></div>
-  <input id="nome" placeholder="Nome - Ex: Ester">
-  <input id="zap" placeholder="WhatsApp">
-  <input id="data" type="date">
-  <textarea id="obs" rows="2" placeholder="Observação"></textarea>
-  <button class="btn" onclick="salvar()">Cadastrar Cliente</button></div>
-  <div id="lista"></div>
-</div></div>
-
-<!-- AGENDAMENTOS -->
-<div id="tab-agend" class="hidden"><div class="conteudo"><div class="card"><p>Seus agendamentos vão aparecer aqui.</p></div></div></div>
-
-<!-- PERFIL -->
-<div id="tab-perfil" class="hidden"><div class="conteudo"><div class="card"><h2>Studio Rayssa Chrystina</h2><p>Divinéia, São Luís - MA<br>Atendimento com amor e cuidado</p></div></div></div>
-
-<nav class="nav">
-  <button class="active" onclick="goTab('inicio',this)">🏠<br>Início</button>
-  <button onclick="goTab('clientes',this)">▤<br>Clientes</button>
-  <button onclick="goTab('agend',this)">📅<br>Agendamentos</button>
-  <button onclick="goTab('perfil',this)">👤<br>Perfil</button>
-</nav>
-
-<script>
-let clientes=JSON.parse(localStorage.getItem('rayssa_clientes')||'[]');
-function goTab(id,btn){
-  ['inicio','clientes','agend','perfil'].forEach(t=>document.getElementById('tab-'+t).classList.add('hidden'));
-  document.getElementById('tab-'+id).classList.remove('hidden');
-  document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  render();
-}
-function salvar(){
-  const nome=document.getElementById('nome').value.trim();
-  if(!nome) return alert('Coloca o nome da cliente');
-  clientes.push({nome, zap:document.getElementById('zap').value, data:document.getElementById('data').value});
-  localStorage.setItem('rayssa_clientes', JSON.stringify(clientes));
-  document.getElementById('nome').value='';
-  alert('Cadastrada! 💖'); goTab('inicio');
-}
-function render(){
-  const tem=clientes.length>0;
-  document.getElementById('tela-vazia').classList.toggle('hidden', tem);
-  document.getElementById('tela-cheia').classList.toggle('hidden', !tem);
-  document.getElementById('nClientes').innerText=clientes.length;
-  document.getElementById('nAtivos').innerText=clientes.length;
-  document.getElementById('lista').innerHTML=clientes.map(c=>`<div class="card" style="text-align:left"><b>${c.nome}</b><br><span style="font-size:12px;color:#888">${c.zap||''}</span></div>`).join('');
-}
-render();
-</script>
-</body>
-</html>
+/* ===== TELA 2 - DASHBOARD EXATO ===== */
+.tela2{background:linear-gradient(180deg,#f9aab9 0%,#fbc6cd 14%,#fde8e6 26%);min-height:100vh;padding-bottom:20px}
+.dash-head{display:flex;justify-content:space-between;align-items:center;padding:22px 18px 6px;position:relative}
+.dash-head::before{content:"";position:absolute;top:14px;left:10px;right:10px;height:1px;background:#c9a24a;transform:rotate(-3deg)}
+.dash-head::after{content:"";position:absolute;top:20px;left:10px;right:10px;height:1px;background:#c9a24a;transform:rotate(2.8deg)}
+.dash-head h1{font-family:'Playfair Display',serif;font-size:32px;color:#9e2746;font-weight:700}
+.right{display:flex;gap:16px;align-items:center}
+.bell{font-size:25px}
+.avatar{width:49px;height:49px;border-radius:50%;background:#fde8d0;border:2px solid #d4af6a;display:flex;align-items:center;justify-content:center;font-size:24px;overflow:hidden}
+.dash-card{background:#fff;border-radius:18px;padding:15px 16px;margin:14px 16px 10px;box-shadow:0 6px 20px rgba(0,0,0,.06);border:1px solid #fde8e0}
+.label{font-size:12px;background:#fdf0e8;color:#7a3a2a;padding:5px 10px;border-radius:6px;display:inline-block;font-weight:600}
+.big{display:flex;align-items:center;gap:14px;margin-top:5px}
+.big-num{font-size:58px;color:#f08a9a;font-weight:700;line-height:1}
+.big-txt{font-size:14.5px;color:#5a3a3a;line-height:1.35}
+.row{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:16px;margin:10px 16px;box-shadow:0 4px 14px rgba(0,0,0,.05);border:1px solid #fdf0e8}
+.row b{font-size:16px;color:#4a2028}
+.row span{font-si…
